@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -18,7 +17,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/pages/");
-        resolver.setSuffix(".html");
+        resolver.setSuffix(".jsp");
         return resolver;
     }
  
@@ -31,13 +30,5 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
  
     }
-    
-    /*@Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/welcome").setViewName("welcomePage");
-        registry.addViewController("/").setViewName("homePage");
-        //registry.addViewController("/hello").setViewName("hello");
-        registry.addViewController("/signin").setViewName("signin");
-    }*/
 
 }

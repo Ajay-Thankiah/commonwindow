@@ -1,12 +1,10 @@
 package self.niu.commonwindow.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import javax.transaction.Transactional;
+import org.springframework.stereotype.Repository;
 import self.niu.commonwindow.model.UserInfo;
 
-@Transactional
+@Repository
 public interface UserInfoRepository extends CrudRepository<UserInfo, Long>{
-	
-	public UserInfo findByName(String name);
 	
 }

@@ -1,5 +1,6 @@
 package self.niu.commonwindow.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,27 +14,28 @@ public class UserInfo {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	//@Column(name="name")
-	//@NotNull
+	@Column(name="name")
     private String name;
-	//@Column(name="userId")
-	//@NotNull
+	
+	@Column(name="userId")
     private String userId;
-	//@Column(name="password")
-	//@NotNull
+	
+	@Column(name="password")
     private String password;
-	//@Column(name="role")
-	//@NotNull
+	
+	@Column(name="role")
     private String role;
 	
-	public UserInfo() { }
+	public UserInfo() {
+		 
+	}
     
-    public UserInfo(String name, String userId, String password, String role) {
+    public UserInfo(String name, String password, String role, String userId) {
 		super();
 		this.name = name;
-		this.userId = userId;
 		this.password = password;
 		this.role = role;
+		this.userId=userId;
 	}
 	public Long getId() {
 		return id;
