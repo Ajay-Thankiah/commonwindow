@@ -8,6 +8,8 @@
 </head>
 
 <body>
+<font color="blue">${userAddedConfirmationMessage }</font>
+<font color="red">${userDetailsMessage }</font>
 	<div class="container">
 		<table class="table table-striped">
 			<thead><tr>
@@ -25,8 +27,8 @@
 					<td>${userInfo.name }</td>
 					<td>${userInfo.role }</td>
 					<td>${userInfo.password }</td>
-					<td><a type="button" class="btn btn-success" href="/updateUserInfo?userId=${userInfo.userId }">Update</a></td>
-					<td><a type="button" class="btn btn-success" href="/deleteUserInfo?userId=${userInfo.userId }">Delete</a></td>
+					<td><a type="button" class="btn btn-success" href="/updateUserInfo?id=${userInfo.id }">Update</a></td>
+					<td><a type="button" class="btn btn-success" href="/deleteUserInfo?id=${userInfo.id }">Delete</a></td>
 					<td></td>
 					</tr>
 				</c:forEach>
