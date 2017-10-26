@@ -5,6 +5,7 @@
 </head>
 
 <body>
+	<font color="blue">Welcome ${userId}!!</font>
 	<form method="POST">
 		User Name*:<input type="text" name="name"/>
 		Role*:<input type="text" name="role"/>
