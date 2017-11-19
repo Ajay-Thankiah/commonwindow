@@ -1,0 +1,14 @@
+<nav role="naigation" class="navbar navbar-default">
+	<div class="">
+		<a href="/" class="navbar-brand"><img width="35px" height="35dx" src="https://4.bp.blogspot.com/-1UB-q3GM4rU/VuUV2QE8JNI/AAAAAAAAM7c/JSbszDYj8W8rww_QXIaCynbCTsdmhoDKw/s1600/Image-1.jpg" alt="Home"/></a>
+	</div> 
+	<div class="navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="/userPage">User Page</a></li>
+			<li><a href="/showUsers">Show Users</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/logout">Logout</a></li>
+		</ul>
+	</div>
+</nav>

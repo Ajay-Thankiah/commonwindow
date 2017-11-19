@@ -8,8 +8,6 @@ import self.niu.commonwindow.repository.UserInfoRepository;
 
 @Service
 public class AdminService {
-	
-	private static int userIDPopulator=0;//should be stored into DB for each admin
 
 	@Autowired
 	private UserInfoRepository userInfoRepository;
@@ -21,22 +19,23 @@ public class AdminService {
 
 	public UserInfo addUser(UserInfo userInfo) {
 		// TODO Auto-generated method stub
-		String name = userInfo.getName();
-		userInfo.setUserId(name.substring(0,2)+"1"+String.format("%03d",++userIDPopulator));
-		userInfo.setPassword(Character.toUpperCase(name.charAt(0))+""+name.substring(1));
-		userInfo.setRole("user");
-		userInfoRepository.save(userInfo);
+		userInfoRepository.saveUser(userInfo);
 		return userInfo;
 	}
 
 	public void removeUser(long id) {
 		// TODO Auto-generated method stub
-		userInfoRepository.delete(id);		
+		userInfoRepository.deleteUserById(id);		
 	}
 
-	public void updateUser(long id) {
+	public void updateUser(UserInfo userInfo) {
 		// TODO Auto-generated method stub
-		userInfoRepository.delete(id);		
+		userInfoRepository.updateUserRepo(userInfo);		
+	}
+
+	public UserInfo findUserById(long id) {
+		// TODO Auto-generated method stub
+		return userInfoRepository.findUserByIdRepo(id);	
 	}
 
 }

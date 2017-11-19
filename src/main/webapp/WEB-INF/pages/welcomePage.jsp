@@ -2,7 +2,7 @@
 <%@ include file="common/navigation.jspf" %>
 
 <div class="container">
-	<font color="blue">Hi ${userId}!! <br> Go through the notifications...</font>
+	<font color="blue">Welcome ${userId}!! <br> This is the home page!!!</font>
 	<!-- 
 	-- notifications based on social media platform, content uploaded
 	-- tabs for status, photo, video
